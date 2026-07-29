@@ -24,10 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================
-  // 2. TYPED.JS INITIALIZATION
+  // 2. TYPED.JS INITIALIZATION (Guarded)
   // ==========================================
   const typedElement = document.getElementById('typed');
-  if (typedElement) {
+  if (typedElement && !typedElement.classList.contains('typed-initialized')) {
+    typedElement.classList.add('typed-initialized');
     new Typed('#typed', {
       strings: [
         "a WordPress Developer.", 
@@ -63,12 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==========================================
-// 4. INFINITE SKILLS TICKER (window.onload)
+// 4. INFINITE SKILLS TICKER
 // ==========================================
 window.addEventListener('load', () => {
   const track = document.getElementById('skills-track');
   
-  if (track) {
+  if (track && !track.classList.contains('cloned')) {
+    track.classList.add('cloned');
     const trackContent = track.innerHTML;
     track.innerHTML = trackContent + trackContent + trackContent;
 
@@ -90,40 +92,3 @@ window.addEventListener('load', () => {
     animate();
   }
 });
-
-// ==========================================
-// 5. PROJECT FILTER FUNCTIONS (Safe if elements are missing)
-// ==========================================
-function scrollGrid(distance) {
-  const container = document.getElementById('scroll-container');
-  if (container) {
-    container.scrollBy({ left: distance, behavior: 'smooth' });
-  }
-}
-
-function filterProjects(category) {
-  const cards = document.querySelectorAll('.project-card');
-  const container = document.getElementById('scroll-container');
-  
-  if (container) {
-    container.scrollTo({ left: 0, behavior: 'smooth' });
-  }
-
-  cards.forEach(card => {
-    if (category === 'all' || card.classList.contains(category)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-
-  const buttons = document.querySelectorAll('.filter-btn');
-  buttons.forEach(btn => {
-    btn.classList.remove('bg-indigo-500', 'text-white');
-    btn.classList.add('bg-gray-800', 'text-gray-300');
-  });
-  
-  if (event && event.target) {
-    event.target.classList.add('bg-indigo-500', 'text-white');
-  }
-}
