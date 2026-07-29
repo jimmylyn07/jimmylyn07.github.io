@@ -1,83 +1,53 @@
-window.onload = function() {
-    const track = document.getElementById('skills-track');
-    
-    // 1. Clone the content to ensure it's long enough to loop
-    const trackContent = track.innerHTML;
-    track.innerHTML = trackContent + trackContent + trackContent;
+document.addEventListener("DOMContentLoaded", () => {
+  // ==========================================
+  // 1. MOBILE SIDEBAR NAVIGATION TOGGLE
+  // ==========================================
+  const menuBtn = document.getElementById("menu-btn");
+  const sidebarMenu = document.getElementById("sidebar-menu");
+  const sidebarOverlay = document.getElementById("sidebar-overlay");
+  const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
-    let scrollPosition = 0;
-    const speed = 0.5; 
-
-    function animate() {
-        scrollPosition -= speed;
-
-        // 2. The Reset Logic
-        // We use a third of the total width because we tripled the content
-        const resetPoint = track.scrollWidth / 3;
-
-        if (Math.abs(scrollPosition) >= resetPoint) {
-            scrollPosition = 0;
-        }
-
-        track.style.transform = `translateX(${scrollPosition}px)`;
-        requestAnimationFrame(animate);
+  function toggleMenu() {
+    if (sidebarMenu && sidebarOverlay) {
+      sidebarMenu.classList.toggle("translate-x-full");
+      sidebarOverlay.classList.toggle("opacity-0");
+      sidebarOverlay.classList.toggle("pointer-events-none");
     }
-
-    animate();
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  const typed = new Typed('#typed', {
-    strings: [
-      "a Wordpress Developer.", 
-      "an Elementor Expert.",
-      "a Frontend Developer.", 
-      "a Graphic Designer."
-    ],
-    typeSpeed: 50,
-    backSpeed: 30,
-    backDelay: 1500, // Pause before deleting
-    startDelay: 500,  // Pause before starting
-    loop: true,
-    showCursor: true,
-    cursorChar: '|'
-  });
-});
-
-// 1. Logic to Scroll Left/Right
-  function scrollGrid(distance) {
-    const container = document.getElementById('scroll-container');
-    container.scrollBy({ left: distance, behavior: 'smooth' });
   }
 
-  // 2. Logic to Filter Categories
-  function filterProjects(category) {
-    const cards = document.querySelectorAll('.project-card');
-    const container = document.getElementById('scroll-container');
-    
-    // Reset scroll position to start when changing categories
-    container.scrollTo({ left: 0, behavior: 'smooth' });
-
-    cards.forEach(card => {
-      if (category === 'all') {
-        card.style.display = 'block';
-      } else if (card.classList.contains(category)) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+  if (menuBtn && sidebarMenu && sidebarOverlay) {
+    menuBtn.addEventListener("click", toggleMenu);
+    sidebarOverlay.addEventListener("click", toggleMenu);
+    sidebarLinks.forEach(link => {
+      link.addEventListener("click", toggleMenu);
     });
-
-    // Optional: Update button colors to show which one is active
-    const buttons = document.querySelectorAll('.filter-btn');
-    buttons.forEach(btn => {
-      btn.classList.remove('bg-indigo-500', 'text-white');
-      btn.classList.add('bg-gray-800', 'text-gray-300');
-    });
-    event.target.classList.add('bg-indigo-500', 'text-white');
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  // ==========================================
+  // 2. TYPED.JS INITIALIZATION
+  // ==========================================
+  const typedElement = document.getElementById('typed');
+  if (typedElement) {
+    new Typed('#typed', {
+      strings: [
+        "a WordPress Developer.", 
+        "an Elementor Expert.",
+        "a Frontend Developer.", 
+        "a Graphic Designer."
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1500,
+      startDelay: 500,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+  }
+
+  // ==========================================
+  // 3. SCROLL REVEAL OBSERVER
+  // ==========================================
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -86,36 +56,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  // Select elements you want to animate on scroll
   document.querySelectorAll("section > div").forEach((el) => {
     el.classList.add("reveal");
     observer.observe(el);
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menu-btn");
-  const sidebarMenu = document.getElementById("sidebar-menu");
-  const sidebarOverlay = document.getElementById("sidebar-overlay");
-  const sidebarLinks = document.querySelectorAll(".sidebar-link");
+// ==========================================
+// 4. INFINITE SKILLS TICKER (window.onload)
+// ==========================================
+window.addEventListener('load', () => {
+  const track = document.getElementById('skills-track');
+  
+  if (track) {
+    const trackContent = track.innerHTML;
+    track.innerHTML = trackContent + trackContent + trackContent;
 
-  function toggleMenu() {
-    sidebarMenu.classList.toggle("translate-x-full");
-    sidebarOverlay.classList.toggle("opacity-0");
-    sidebarOverlay.classList.toggle("pointer-events-none");
-  }
+    let scrollPosition = 0;
+    const speed = 0.5; 
 
-  if (menuBtn && sidebarMenu && sidebarOverlay) {
-    // Toggle menu when hamburger button is clicked
-    menuBtn.addEventListener("click", toggleMenu);
+    function animate() {
+      scrollPosition -= speed;
+      const resetPoint = track.scrollWidth / 3;
 
-    // Close menu when clicking the backdrop overlay
-    sidebarOverlay.addEventListener("click", toggleMenu);
+      if (Math.abs(scrollPosition) >= resetPoint) {
+        scrollPosition = 0;
+      }
 
-    // Close menu when clicking any sidebar navigation link
-    sidebarLinks.forEach(link => {
-      link.addEventListener("click", toggleMenu);
-    });
+      track.style.transform = `translateX(${scrollPosition}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
   }
 });
+
+// ==========================================
+// 5. PROJECT FILTER FUNCTIONS (Safe if elements are missing)
+// ==========================================
+function scrollGrid(distance) {
+  const container = document.getElementById('scroll-container');
+  if (container) {
+    container.scrollBy({ left: distance, behavior: 'smooth' });
+  }
+}
+
+function filterProjects(category) {
+  const cards = document.querySelectorAll('.project-card');
+  const container = document.getElementById('scroll-container');
   
+  if (container) {
+    container.scrollTo({ left: 0, behavior: 'smooth' });
+  }
+
+  cards.forEach(card => {
+    if (category === 'all' || card.classList.contains(category)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  const buttons = document.querySelectorAll('.filter-btn');
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-indigo-500', 'text-white');
+    btn.classList.add('bg-gray-800', 'text-gray-300');
+  });
+  
+  if (event && event.target) {
+    event.target.classList.add('bg-indigo-500', 'text-white');
+  }
+}
