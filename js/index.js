@@ -76,4 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     event.target.classList.add('bg-indigo-500', 'text-white');
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // Select elements you want to animate on scroll
+  document.querySelectorAll("section > div").forEach((el) => {
+    el.classList.add("reveal");
+    observer.observe(el);
+  });
+});
   
