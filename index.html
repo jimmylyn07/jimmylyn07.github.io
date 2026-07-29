@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body class="bg-[#0f172a] text-gray-300">
-  <!-- Library FIRST -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+<!-- Library FIRST -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <!-- Your file SECOND -->
 <script src="js/index.js"></script>
+
 <header class="bg-[#0f172a] text-gray-300 body-font border-b border-gray-800 sticky top-0 z-50 backdrop-blur-md bg-opacity-90">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
     
@@ -40,12 +41,11 @@
   </div>
 </header>
 
-<!--hero section-->
+<!-- Hero Section -->
 <section id="hero-section" class="bg-[#0f172a] text-gray-300 body-font relative overflow-hidden">
-  <!-- Optional ambient glow background effect -->
   <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
-  <div class="container mx-auto px-5 py-24 flex flex-col items-center text-center relative z-10">
+  <div class="container mx-auto px-5 max-w-5xl py-24 flex flex-col items-center text-center relative z-10">
     
     <!-- Profile Avatar -->
     <div class="mb-6 transform transition duration-500 hover:scale-105">
@@ -90,8 +90,9 @@
   </div>
 </section>
 
+<!-- Projects Section -->
 <section id="projects" class="bg-[#0f172a] text-gray-300 body-font py-24">
-  <div class="container mx-auto px-5">
+  <div class="container mx-auto px-5 max-w-5xl">
     
     <!-- Section Header -->
     <div class="flex flex-col text-left sm:text-center w-full mb-12">
@@ -102,36 +103,27 @@
     <!-- Projects Container - 2 Column Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
-      <!-- Project Card 1: Clickable -->
+      <!-- Project Card 1 -->
       <a href="https://your-project-link.com" target="_blank" class="block group h-full">
         <div class="bg-[#1e293b] border border-gray-800 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500/50 group-hover:bg-[#273548] shadow-xl group-hover:shadow-2xl h-full flex flex-col justify-between">
           <div>
-            <!-- Category / Tech Stack Tag -->
             <div class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-3">
               Web App &bull; PHP &bull; MySQL
             </div>
-
-            <!-- Project Title -->
             <h2 class="text-2xl text-white font-bold mb-4 group-hover:text-blue-400 transition-colors">
               E-Hatag &mdash; Digitizing Blood Donor Cards
             </h2>
-
-            <!-- Description -->
             <p class="text-gray-400 text-base leading-relaxed mb-6">
               A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type and manage donor records without touching a filing cabinet.
             </p>
           </div>
-
           <div>
-            <!-- Tech Badges -->
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">PHP</span>
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">MySQL</span>
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">JavaScript</span>
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">HTML/CSS</span>
             </div>
-
-            <!-- Key Highlights / Bullet Points -->
             <ul class="space-y-2 text-sm text-gray-400">
               <li class="flex items-center">
                 <span class="text-blue-400 mr-2">&#9656;</span> Real-time donation and request flow for donors
@@ -144,40 +136,30 @@
               </li>
             </ul>
           </div>
-
         </div>
       </a>
 
-      <!-- Project Card 2: Clickable -->
+      <!-- Project Card 2 -->
       <a href="https://your-project-link.com" target="_blank" class="block group h-full">
         <div class="bg-[#1e293b] border border-gray-800 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500/50 group-hover:bg-[#273548] shadow-xl group-hover:shadow-2xl h-full flex flex-col justify-between">
           <div>
-            <!-- Category / Tech Stack Tag -->
             <div class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-3">
               Web App &bull; PHP &bull; MySQL
             </div>
-
-            <!-- Project Title -->
             <h2 class="text-2xl text-white font-bold mb-4 group-hover:text-blue-400 transition-colors">
               E-Hatag &mdash; Digitizing Blood Donor Cards
             </h2>
-
-            <!-- Description -->
             <p class="text-gray-400 text-base leading-relaxed mb-6">
               A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type and manage donor records without touching a filing cabinet.
             </p>
           </div>
-
           <div>
-            <!-- Tech Badges -->
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">PHP</span>
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">MySQL</span>
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">JavaScript</span>
               <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">HTML/CSS</span>
             </div>
-
-            <!-- Key Highlights / Bullet Points -->
             <ul class="space-y-2 text-sm text-gray-400">
               <li class="flex items-center">
                 <span class="text-blue-400 mr-2">&#9656;</span> Real-time donation and request flow for donors
@@ -190,7 +172,6 @@
               </li>
             </ul>
           </div>
-
         </div>
       </a>
 
@@ -198,7 +179,8 @@
   </div>
 </section>
 
-<section id="skills" class="bg-[#0f172a] text-gray-300 body-font overflow-hidden py-24"><!--skills section-->
+<!-- Skills Section -->
+<section id="skills" class="bg-[#0f172a] text-gray-300 body-font overflow-hidden py-24">
   <div class="container mx-auto px-5 max-w-5xl">
     
     <!-- Section Heading -->
@@ -208,7 +190,6 @@
     </div>
     
     <div class="skills-viewport relative overflow-hidden w-full">
-      
       <div id="skills-track" class="flex items-center gap-12 w-max cursor-pointer">
         
         <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
@@ -252,11 +233,12 @@
   </div>
 </section>
 
+<!-- Experience Section -->
 <section id="experience" class="bg-[#0f172a] text-gray-300 body-font py-24">
   <div class="container mx-auto px-5 max-w-5xl">
     
     <!-- Section Header -->
-    <div class="flex flex-col text-left w-full mb-16">
+    <div class="flex flex-col text-left sm:text-center w-full mb-16">
       <span class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">Where I've Worked</span>
       <h1 class="sm:text-4xl text-3xl font-bold title-font text-white">Experience</h1>
     </div>
@@ -266,11 +248,9 @@
       
       <!-- Experience Item 1 -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <!-- Date Column -->
         <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-blue-400 pt-1">
           Aug 2025 &mdash; Present
         </div>
-        <!-- Details Column -->
         <div class="md:col-span-3">
           <h2 class="text-xl text-white font-bold mb-1">Sales Representative</h2>
           <div class="text-sm font-mono text-gray-400 mb-4">Advanztech Computer Parts and Services &bull; Iligan City</div>
@@ -290,11 +270,9 @@
 
       <!-- Experience Item 2 -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <!-- Date Column -->
         <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-gray-400 pt-1">
           Dec 2024 &mdash; Jul 2025
         </div>
-        <!-- Details Column -->
         <div class="md:col-span-3">
           <h2 class="text-xl text-white font-bold mb-1">Customer Care Staff</h2>
           <div class="text-sm font-mono text-gray-400 mb-4">New Day Realty Corp &bull; Iligan City</div>
@@ -314,11 +292,9 @@
 
       <!-- Experience Item 3 -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <!-- Date Column -->
         <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-gray-400 pt-1">
           Aug 2024 &mdash; Nov 2024
         </div>
-        <!-- Details Column -->
         <div class="md:col-span-3">
           <h2 class="text-xl text-white font-bold mb-1">Customer Service Representative</h2>
           <div class="text-sm font-mono text-gray-400 mb-4">Siblings Solutions &bull; Tagum</div>
@@ -335,11 +311,9 @@
 
       <!-- Experience Item 4 -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <!-- Date Column -->
         <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-gray-400 pt-1">
           Nov 2023 &mdash; Aug 2024
         </div>
-        <!-- Details Column -->
         <div class="md:col-span-3">
           <h2 class="text-xl text-white font-bold mb-1">Customer Service Representative</h2>
           <div class="text-sm font-mono text-gray-400 mb-4">VXI Global Holdings &bull; Davao City</div>
@@ -358,11 +332,12 @@
   </div>
 </section>
 
+<!-- Background Section -->
 <section id="background" class="bg-[#0f172a] text-gray-300 body-font py-24">
   <div class="container mx-auto px-5 max-w-5xl">
     
     <!-- Section Header -->
-    <div class="flex flex-col text-left w-full mb-12">
+    <div class="flex flex-col text-left sm:text-center w-full mb-12">
       <span class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">Background</span>
       <h1 class="sm:text-4xl text-3xl font-bold title-font text-white">Education & Certification</h1>
     </div>
@@ -414,8 +389,9 @@
   </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="bg-[#0f172a] text-gray-300 body-font py-24">
-  <div class="container mx-auto px-5 max-w-4xl">
+  <div class="container mx-auto px-5 max-w-5xl">
     
     <!-- Section Header & Content -->
     <div class="flex flex-col text-left w-full mb-12">
@@ -429,17 +405,14 @@
 
       <!-- Contact Action Buttons/Links -->
       <div class="flex flex-wrap items-center gap-4 mb-16">
-        <!-- Email Button -->
         <a href="mailto:jimmylyninfante07@gmail.com" class="inline-flex items-center text-white bg-[#1e293b] border border-gray-800 hover:border-blue-500/50 hover:bg-[#273548] py-3 px-6 rounded-xl font-mono text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
           jimmylyninfante07@gmail.com
         </a>
 
-        <!-- Clickable Phone Number Link -->
         <a href="tel:09614306515" class="inline-flex items-center text-gray-300 bg-[#1e293b] border border-gray-800 hover:border-blue-500/50 hover:bg-[#273548] hover:text-blue-400 py-3 px-6 rounded-xl font-mono text-sm transition-all duration-300 hover:-translate-y-0.5">
           0961 430 6515
         </a>
 
-        <!-- LinkedIn Link -->
         <a href="https://linkedin.com/in/yourusername" target="_blank" class="inline-flex items-center text-gray-300 bg-[#1e293b] border border-gray-800 hover:border-blue-500/50 hover:bg-[#273548] hover:text-blue-400 py-3 px-6 rounded-xl font-mono text-sm transition-all duration-300 hover:-translate-y-0.5">
           LinkedIn 
           <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
@@ -454,5 +427,6 @@
     </div>
   </div>
 </section>
+
 </body>
 </html>
