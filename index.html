@@ -7,7 +7,7 @@
     <title>Jimmy Lyn Infante — Portfolio</title>
     <link rel="stylesheet" href="mystyle.css">
 </head>
-<body class="bg-[#0f172a] text-gray-300 font-sans antialiased selection:bg-blue-500 selection:text-white">
+<body class="bg-[#0c0c0c] text-gray-300 font-sans antialiased selection:bg-blue-500 selection:text-white">
 
 <!-- Library FIRST -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -15,35 +15,37 @@
 <script src="js/index.js"></script>
 
 <!-- Header / Navigation -->
-<header class="bg-[#0f172a]/90 backdrop-blur-md text-gray-300 body-font sticky top-0 z-50 border-b border-gray-800">
-  <div class="container mx-auto flex flex-wrap p-5 max-w-5xl flex-col md:flex-row items-center justify-between">
+<header class="bg-[#0c0c0c]/90 backdrop-blur-md text-gray-300 body-font sticky top-0 z-50 border-b border-neutral-900">
+  <div class="container mx-auto flex flex-wrap p-5 max-w-6xl flex-col md:flex-row items-center justify-between">
     
-    <!-- Logo & Status -->
-    <div class="flex items-center space-x-6">
-      <a href="#" class="flex title-font font-bold items-center text-white tracking-wider text-lg">
-        JIMMY LYN INFANTE
+    <!-- Logo & Avatar -->
+    <div class="flex items-center space-x-3">
+      <img src="images/15ad110a-ceeb-4b57-9f01-7c7076962cf9.jpg" alt="Jimmy Lyn Infante" class="w-8 h-8 object-cover rounded-full border border-neutral-800">
+      <a href="#" class="flex title-font font-bold items-center text-white tracking-wider text-sm uppercase">
+        Jimmy Lyn Infante
       </a>
-      <div class="hidden sm:flex items-center space-x-2 text-xs font-mono text-cyan-400">
-        <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-        <span>OPEN TO WORK</span>
-      </div>
     </div>
 
     <!-- Navigation Links -->
-    <nav class="flex flex-wrap items-center text-sm justify-center space-x-8 font-mono mt-4 md:mt-0">
-      <a href="#hero-section" class="hover:text-blue-400 transition-colors">About</a>
-      <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-      <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-      <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-      <a href="#background" class="hover:text-blue-400 transition-colors">Background</a>
-      <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+    <nav class="flex flex-wrap items-center text-xs tracking-widest uppercase justify-center space-x-8 font-mono mt-4 md:mt-0 text-neutral-400">
+      <a href="#projects" class="hover:text-blue-500 transition-colors">Work</a>
+      <a href="#skills" class="hover:text-blue-500 transition-colors">Skills</a>
+      <a href="#experience" class="hover:text-blue-500 transition-colors">Experience</a>
+      <a href="#background" class="hover:text-blue-500 transition-colors">Background</a>
+      <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
     </nav>
+
+    <!-- Status Indicator -->
+    <div class="hidden lg:flex items-center space-x-2 text-xs font-mono text-neutral-400 mt-4 md:mt-0">
+      <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+      <span class="tracking-widest uppercase">Open to Work</span>
+    </div>
 
   </div>
 </header>
 
 <!-- Hero Section -->
-<section id="hero-section" class="bg-[#0f172a] text-gray-300 body-font relative overflow-hidden">
+<section id="hero-section" class="bg-[#0c0c0c] text-gray-300 body-font relative overflow-hidden">
   <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="container mx-auto px-5 max-w-5xl py-24 flex flex-col items-center text-center relative z-10">
@@ -73,7 +75,7 @@
       <a href="https://docs.google.com/document/d/1t0uHRsNBPWfQfOQK5nzTYQ732vWhmUkBPNcc74xSdlA/edit?usp=sharing" target="_blank" class="inline-flex items-center text-white bg-blue-600 border-0 py-3 px-8 focus:outline-none hover:bg-blue-700 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5">
         View CV
       </a>
-      <a href="#contact" class="inline-flex items-center text-gray-300 bg-transparent border border-gray-700 py-3 px-8 focus:outline-none hover:border-blue-500 hover:text-white rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5">
+      <a href="#contact" class="inline-flex items-center text-gray-300 bg-transparent border border-neutral-800 py-3 px-8 focus:outline-none hover:border-neutral-600 hover:text-white rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5">
         Get in touch
       </a>
     </div>
@@ -92,12 +94,12 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="bg-[#0f172a] text-gray-300 body-font py-24">
+<section id="projects" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
     
     <!-- Section Header -->
-    <div class="flex flex-col text-left sm:text-center w-full mb-12">
-      <span class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">My Work</span>
+    <div class="flex flex-col text-left w-full mb-12">
+      <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">My Work</span>
       <h2 class="sm:text-4xl text-3xl font-bold title-font text-white">Featured Projects</h2>
     </div>
 
@@ -106,34 +108,31 @@
       
       <!-- Project Card 1 -->
       <a href="https://your-project-link.com" target="_blank" class="block group h-full">
-        <div class="bg-[#1e293b] border border-gray-800 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500/50 group-hover:bg-[#273548] shadow-xl group-hover:shadow-2xl h-full flex flex-col justify-between">
+        <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:border-blue-500/40 group-hover:bg-[#1a1a1a] shadow-xl h-full flex flex-col justify-between">
           <div>
-            <div class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-3">
+            <div class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-3">
               Web App &bull; PHP &bull; MySQL
             </div>
             <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-blue-400 transition-colors">
               E-Hatag &mdash; Digitizing Blood Donor Cards
             </h3>
-            <p class="text-gray-400 text-base leading-relaxed mb-6">
-              A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type and manage donor records without touching a filing cabinet.
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type.
             </p>
           </div>
           <div>
             <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">PHP</span>
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">MySQL</span>
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">JavaScript</span>
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">PHP</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">MySQL</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">JavaScript</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">Tailwind</span>
             </div>
-            <ul class="space-y-2 text-sm text-gray-400">
+            <ul class="space-y-2 text-xs text-neutral-400 font-mono">
               <li class="flex items-center">
-                <span class="text-blue-400 mr-2">&#9656;</span> Real-time donation and request flow for donors
+                <span class="text-blue-500 mr-2">&#9656;</span> Real-time donation and request flow
               </li>
               <li class="flex items-center">
-                <span class="text-blue-400 mr-2">&#9656;</span> Admin dashboard for tracking inventory by blood type
-              </li>
-              <li class="flex items-center">
-                <span class="text-blue-400 mr-2">&#9656;</span> Centralized donor record management
+                <span class="text-blue-500 mr-2">&#9656;</span> Live inventory tracking dashboard
               </li>
             </ul>
           </div>
@@ -142,34 +141,31 @@
 
       <!-- Project Card 2 -->
       <a href="https://your-project-link.com" target="_blank" class="block group h-full">
-        <div class="bg-[#1e293b] border border-gray-800 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue-500/50 group-hover:bg-[#273548] shadow-xl group-hover:shadow-2xl h-full flex flex-col justify-between">
+        <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:border-blue-500/40 group-hover:bg-[#1a1a1a] shadow-xl h-full flex flex-col justify-between">
           <div>
-            <div class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-3">
+            <div class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-3">
               Web App &bull; PHP &bull; MySQL
             </div>
             <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-blue-400 transition-colors">
               E-Hatag &mdash; Digitizing Blood Donor Cards
             </h3>
-            <p class="text-gray-400 text-base leading-relaxed mb-6">
-              A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type and manage donor records without touching a filing cabinet.
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type.
             </p>
           </div>
           <div>
             <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">PHP</span>
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">MySQL</span>
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">JavaScript</span>
-              <span class="px-3 py-1 text-xs font-mono bg-[#0f172a] border border-gray-700 text-gray-300 rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">PHP</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">MySQL</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">JavaScript</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">Tailwind</span>
             </div>
-            <ul class="space-y-2 text-sm text-gray-400">
+            <ul class="space-y-2 text-xs text-neutral-400 font-mono">
               <li class="flex items-center">
-                <span class="text-blue-400 mr-2">&#9656;</span> Real-time donation and request flow for donors
+                <span class="text-blue-500 mr-2">&#9656;</span> Real-time donation and request flow
               </li>
               <li class="flex items-center">
-                <span class="text-blue-400 mr-2">&#9656;</span> Admin dashboard for tracking inventory by blood type
-              </li>
-              <li class="flex items-center">
-                <span class="text-blue-400 mr-2">&#9656;</span> Centralized donor record management
+                <span class="text-blue-500 mr-2">&#9656;</span> Live inventory tracking dashboard
               </li>
             </ul>
           </div>
@@ -181,51 +177,39 @@
 </section>
 
 <!-- Skills Section -->
-<section id="skills" class="bg-[#0f172a] text-gray-300 body-font overflow-hidden py-24">
+<section id="skills" class="bg-[#0c0c0c] text-gray-300 body-font overflow-hidden py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
     
-    <div class="flex flex-col text-left sm:text-center w-full mb-12">
-      <span class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">Expertise</span>
+    <div class="flex flex-col text-left w-full mb-12">
+      <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">Expertise</span>
       <h2 class="title-font sm:text-4xl text-3xl font-bold text-white">Skills</h2>
     </div>
     
     <div class="skills-viewport relative overflow-hidden w-full">
-      <div id="skills-track" class="flex items-center gap-12 w-max cursor-pointer">
+      <div id="skills-track" class="flex items-center gap-6 w-max cursor-pointer">
         
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="HTML5" class="w-full h-24 object-contain" src="images/HTML5_logo_and_wordmark.svg.webp">
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="HTML5" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="images/HTML5_logo_and_wordmark.svg.webp">
         </div>
 
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="Laravel" class="w-full h-24 object-contain" src="/images/Laravel.svg.png">
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="Laravel" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="/images/Laravel.svg.png">
         </div>
 
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="MySQL" class="w-full h-24 object-contain" src="/images/Mysql_logo.png">
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="MySQL" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="/images/Mysql_logo.png">
         </div>
 
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="PHP" class="w-full h-24 object-contain" src="/images/PHP-logo.svg.png">
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="PHP" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="/images/PHP-logo.svg.png">
         </div>
 
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="React" class="w-full h-24 object-contain" src="/images/React-icon.svg.png">
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="React" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="/images/React-icon.svg.png">
         </div>
 
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="Tailwind" class="w-full h-24 object-contain" src="/images/Tailwind_CSS_Logo.svg.png">
-        </div>      
-
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="HTML5" class="w-full h-24 object-contain" src="images/HTML5_logo_and_wordmark.svg.webp">
-        </div>
-        
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="Laravel" class="w-full h-24 object-contain" src="/images/Laravel.svg.png">
-        </div>
-
-        <div class="skill-item w-40 flex-shrink-0 bg-[#1e293b] border border-gray-800 p-6 rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-          <img alt="HTML5" class="w-full h-24 object-contain" src="images/dfb96cc174513093cd6ed61489ccb750.svg">
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="Tailwind" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="/images/Tailwind_CSS_Logo.svg.png">
         </div>
 
       </div>
@@ -234,93 +218,84 @@
 </section>
 
 <!-- Experience Section -->
-<section id="experience" class="bg-[#0f172a] text-gray-300 body-font py-24">
+<section id="experience" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
     
-    <div class="flex flex-col text-left sm:text-center w-full mb-16">
-      <span class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">Where I've Worked</span>
+    <div class="flex flex-col text-left w-full mb-16">
+      <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">Track Record</span>
       <h2 class="sm:text-4xl text-3xl font-bold title-font text-white">Experience</h2>
     </div>
 
     <div class="space-y-12">
       
       <!-- Experience Item 1 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-blue-400 pt-1">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-neutral-900/80 transition-all duration-300 hover:translate-x-1">
+        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-blue-500 pt-1">
           Aug 2025 &mdash; Present
         </div>
         <div class="md:col-span-3">
           <h3 class="text-xl text-white font-bold mb-1">Sales Representative</h3>
-          <div class="text-sm font-mono text-gray-400 mb-4">Advanztech Computer Parts and Services &bull; Iligan City</div>
-          <ul class="space-y-2 text-sm text-gray-400">
+          <div class="text-xs font-mono text-neutral-400 mb-4">Advanztech Computer Parts and Services &bull; Iligan City</div>
+          <ul class="space-y-2 text-sm text-neutral-400">
             <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Managed monthly sales through proactive customer engagement and social media promotion
+              <span class="text-blue-500 mr-2">&mdash;</span> Managed monthly sales through proactive customer engagement and social media promotion
             </li>
             <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Handled high-volume transactions during peak hours while keeping wait times low
+              <span class="text-blue-500 mr-2">&mdash;</span> Handled high-volume transactions during peak hours while keeping wait times low
             </li>
             <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Built deep product knowledge to recommend the right parts to each customer
+              <span class="text-blue-500 mr-2">&mdash;</span> Built deep product knowledge to recommend the right parts to each customer
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Experience Item 2 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-gray-400 pt-1">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-neutral-900/80 transition-all duration-300 hover:translate-x-1">
+        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-neutral-500 pt-1">
           Dec 2024 &mdash; Jul 2025
         </div>
         <div class="md:col-span-3">
           <h3 class="text-xl text-white font-bold mb-1">Customer Care Staff</h3>
-          <div class="text-sm font-mono text-gray-400 mb-4">New Day Realty Corp &bull; Iligan City</div>
-          <ul class="space-y-2 text-sm text-gray-400">
+          <div class="text-xs font-mono text-neutral-400 mb-4">New Day Realty Corp &bull; Iligan City</div>
+          <ul class="space-y-2 text-sm text-neutral-400">
             <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Resolved customer complaints within given timeframes to protect client experience
+              <span class="text-blue-500 mr-2">&mdash;</span> Resolved customer complaints within given timeframes to protect client experience
             </li>
             <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Managed unit turnovers &mdash; coordinating repairs, inspections, and paperwork
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Worked across departments to keep unit construction on schedule
+              <span class="text-blue-500 mr-2">&mdash;</span> Managed unit turnovers &mdash; coordinating repairs, inspections, and paperwork
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Experience Item 3 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-gray-400 pt-1">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-neutral-900/80 transition-all duration-300 hover:translate-x-1">
+        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-neutral-500 pt-1">
           Aug 2024 &mdash; Nov 2024
         </div>
         <div class="md:col-span-3">
           <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
-          <div class="text-sm font-mono text-gray-400 mb-4">Siblings Solutions &bull; Tagum</div>
-          <ul class="space-y-2 text-sm text-gray-400">
+          <div class="text-xs font-mono text-neutral-400 mb-4">Siblings Solutions &bull; Tagum</div>
+          <ul class="space-y-2 text-sm text-neutral-400">
             <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Processed dental insurance claims for patients using CRM tools
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Ran outbound follow-up calls with insurers on claim status
+              <span class="text-blue-500 mr-2">&mdash;</span> Processed dental insurance claims for patients using CRM tools
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Experience Item 4 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-gray-800/60 last:border-0 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-gray-400 pt-1">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 transition-all duration-300 hover:translate-x-1">
+        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-neutral-500 pt-1">
           Nov 2023 &mdash; Aug 2024
         </div>
         <div class="md:col-span-3">
           <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
-          <div class="text-sm font-mono text-gray-400 mb-4">VXI Global Holdings &bull; Davao City</div>
-          <ul class="space-y-2 text-sm text-gray-400">
+          <div class="text-xs font-mono text-neutral-400 mb-4">VXI Global Holdings &bull; Davao City</div>
+          <ul class="space-y-2 text-sm text-neutral-400">
             <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Maintained customer satisfaction through effective problem-solving
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-400 mr-2">&mdash;</span> Managed high call volumes and high-pressure periods without dropping service quality
+              <span class="text-blue-500 mr-2">&mdash;</span> Maintained customer satisfaction through effective problem-solving
             </li>
           </ul>
         </div>
@@ -331,18 +306,18 @@
 </section>
 
 <!-- Background Section -->
-<section id="background" class="bg-[#0f172a] text-gray-300 body-font py-24">
+<section id="background" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
     
-    <div class="flex flex-col text-left sm:text-center w-full mb-12">
-      <span class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">Background</span>
+    <div class="flex flex-col text-left w-full mb-12">
+      <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">Credentials</span>
       <h2 class="sm:text-4xl text-3xl font-bold title-font text-white">Education & Certification</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
       <!-- Education Card -->
-      <div class="bg-[#1e293b] border border-gray-800 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-2xl flex flex-col justify-between">
+      <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 flex flex-col justify-between">
         <div>
           <div class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-3">
             Education
@@ -350,19 +325,19 @@
           <h3 class="text-xl text-white font-bold mb-2">
             B.S. Information Technology
           </h3>
-          <p class="text-sm font-mono text-gray-400 mb-6">
+          <p class="text-xs font-mono text-neutral-400 mb-6">
             Mindanao State University &mdash; Iligan Institute of Technology
           </p>
         </div>
         <div>
-          <p class="text-sm text-gray-400 leading-relaxed border-t border-gray-800/80 pt-4">
+          <p class="text-sm text-neutral-400 leading-relaxed border-t border-neutral-900 pt-4">
             Relevant coursework: Database Management, Web Development, Software Engineering.
           </p>
         </div>
       </div>
 
       <!-- Certification Card -->
-      <div class="bg-[#1e293b] border border-gray-800 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-2xl flex flex-col justify-between">
+      <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 flex flex-col justify-between">
         <div>
           <div class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-3">
             Certification
@@ -370,12 +345,12 @@
           <h3 class="text-xl text-white font-bold mb-2">
             Google UX Design Professional Certificate
           </h3>
-          <p class="text-sm font-mono text-gray-400 mb-6">
+          <p class="text-xs font-mono text-neutral-400 mb-6">
             Core focus
           </p>
         </div>
         <div>
-          <p class="text-sm text-gray-400 leading-relaxed border-t border-gray-800/80 pt-4">
+          <p class="text-sm text-neutral-400 leading-relaxed border-t border-neutral-900 pt-4">
             UX research, mobile-responsive web design, wireframing, and interactive prototyping.
           </p>
         </div>
@@ -386,34 +361,34 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="bg-[#0f172a] text-gray-300 body-font py-24">
+<section id="contact" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
     
     <div class="flex flex-col text-left w-full mb-12">
-      <span class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-3">Let's Talk</span>
+      <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-3">Let's Talk</span>
       <h2 class="sm:text-5xl text-3xl font-bold title-font text-white mb-6 leading-tight">
         Let's build something worth using.
       </h2>
-      <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-2xl mb-10">
+      <p class="text-neutral-400 text-base sm:text-lg leading-relaxed max-w-2xl mb-10">
         I'm currently looking for a full-time role in web development or UX design. If you think I'd be a good fit, I'd love to hear from you.
       </p>
 
       <div class="flex flex-wrap items-center gap-4 mb-16">
-        <a href="mailto:jimmylyninfante07@gmail.com" class="inline-flex items-center text-white bg-[#1e293b] border border-gray-800 hover:border-blue-500/50 hover:bg-[#273548] py-3 px-6 rounded-xl font-mono text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+        <a href="mailto:jimmylyninfante07@gmail.com" class="inline-flex items-center text-white bg-[#141414] border border-neutral-800 hover:border-blue-500/40 hover:bg-[#1a1a1a] py-3.5 px-6 rounded-xl font-mono text-xs transition-all duration-300 shadow-lg hover:-translate-y-0.5">
           jimmylyninfante07@gmail.com
         </a>
 
-        <a href="tel:09614306515" class="inline-flex items-center text-gray-300 bg-[#1e293b] border border-gray-800 hover:border-blue-500/50 hover:bg-[#273548] hover:text-blue-400 py-3 px-6 rounded-xl font-mono text-sm transition-all duration-300 hover:-translate-y-0.5">
+        <a href="tel:09614306515" class="inline-flex items-center text-gray-300 bg-[#141414] border border-neutral-800 hover:border-blue-500/40 hover:bg-[#1a1a1a] hover:text-blue-400 py-3.5 px-6 rounded-xl font-mono text-xs transition-all duration-300 hover:-translate-y-0.5">
           0961 430 6515
         </a>
 
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="inline-flex items-center text-gray-300 bg-[#1e293b] border border-gray-800 hover:border-blue-500/50 hover:bg-[#273548] hover:text-blue-400 py-3 px-6 rounded-xl font-mono text-sm transition-all duration-300 hover:-translate-y-0.5">
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="inline-flex items-center text-gray-300 bg-[#141414] border border-neutral-800 hover:border-blue-500/40 hover:bg-[#1a1a1a] hover:text-blue-400 py-3.5 px-6 rounded-xl font-mono text-xs transition-all duration-300 hover:-translate-y-0.5">
           LinkedIn 
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          <svg class="w-3.5 h-3.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
         </a>
       </div>
 
-      <div class="pt-8 border-t border-gray-800/80 text-xs font-mono text-gray-500">
+      <div class="pt-8 border-t border-neutral-900 text-xs font-mono text-neutral-500">
         Jimmy Lyn L. Infante &mdash; Iligan City, Philippines
       </div>
 
