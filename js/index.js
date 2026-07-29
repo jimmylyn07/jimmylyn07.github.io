@@ -93,34 +93,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const menuBtn = document.getElementById('menu-btn');
-  const sidebarMenu = document.getElementById('sidebar-menu');
-  const sidebarOverlay = document.getElementById('sidebar-overlay');
-  const sidebarLinks = document.querySelectorAll('.sidebar-link');
-  const hamburgerLines = menuBtn.querySelectorAll('.hamburger-line');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menu-btn");
+  const sidebarMenu = document.getElementById("sidebar-menu");
+  const sidebarOverlay = document.getElementById("sidebar-overlay");
+  const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
-  function toggleSidebar() {
-    const isOpen = sidebarMenu.classList.contains('translate-x-full');
-    if (isOpen) {
-      sidebarMenu.classList.remove('translate-x-full');
-      sidebarOverlay.classList.remove('opacity-0', 'pointer-events-none');
-      // Animate hamburger to X
-      hamburgerLines[0].classList.add('rotate-45', 'translate-y-2');
-      hamburgerLines[1].classList.add('opacity-0');
-      hamburgerLines[2].classList.add('-rotate-45', '-translate-y-2');
-    } else {
-      sidebarMenu.classList.add('translate-x-full');
-      sidebarOverlay.classList.add('opacity-0', 'pointer-events-none');
-      // Revert hamburger
-      hamburgerLines[0].classList.remove('rotate-45', 'translate-y-2');
-      hamburgerLines[1].classList.remove('opacity-0');
-      hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-2');
-    }
+  function toggleMenu() {
+    sidebarMenu.classList.toggle("translate-x-full");
+    sidebarOverlay.classList.toggle("opacity-0");
+    sidebarOverlay.classList.toggle("pointer-events-none");
   }
 
-  menuBtn.addEventListener('click', toggleSidebar);
-  sidebarOverlay.addEventListener('click', toggleSidebar);
-  sidebarLinks.forEach(link => {
-    link.addEventListener('click', toggleSidebar);
-  });
+  if (menuBtn && sidebarMenu && sidebarOverlay) {
+    // Toggle menu when hamburger button is clicked
+    menuBtn.addEventListener("click", toggleMenu);
+
+    // Close menu when clicking the backdrop overlay
+    sidebarOverlay.addEventListener("click", toggleMenu);
+
+    // Close menu when clicking any sidebar navigation link
+    sidebarLinks.forEach(link => {
+      link.addEventListener("click", toggleMenu);
+    });
+  }
+});
   
