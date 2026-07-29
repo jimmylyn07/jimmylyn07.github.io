@@ -44,7 +44,6 @@
   </div>
 </header>
 
-<!-- Hero Section -->
 <section id="hero-section" class="bg-[#0c0c0c] text-gray-300 body-font relative overflow-hidden">
   <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -217,7 +216,7 @@
   </div>
 </section>
 
-<!-- Experience Section -->
+<!-- Experience Section (Tailwind Timeline Style) -->
 <section id="experience" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
     
@@ -226,78 +225,102 @@
       <h2 class="sm:text-4xl text-3xl font-bold title-font text-white">Experience</h2>
     </div>
 
-    <div class="space-y-12">
+    <!-- Timeline Wrapper -->
+    <div class="relative wrap overflow-hidden p-0 h-full">
       
+      <!-- Central Line (Desktop) / Left Line (Mobile) -->
+      <div class="absolute border-2-2 border-neutral-800 h-full left-6 md:left-1/2 transform -translate-x-1/2 bg-neutral-800 w-0.5 z-0"></div>
+
       <!-- Experience Item 1 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-neutral-900/80 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-blue-500 pt-1">
-          Aug 2025 &mdash; Present
+      <div class="mb-10 flex flex-col md:flex-row items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-right">
+          <span class="text-xs font-mono uppercase tracking-wider text-blue-400 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Aug 2025 &mdash; Present</span>
         </div>
-        <div class="md:col-span-3">
-          <h3 class="text-xl text-white font-bold mb-1">Sales Representative</h3>
-          <div class="text-xs font-mono text-neutral-400 mb-4">Advanztech Computer Parts and Services &bull; Iligan City</div>
-          <ul class="space-y-2 text-sm text-neutral-400">
-            <li class="flex items-start">
-              <span class="text-blue-500 mr-2">&mdash;</span> Managed monthly sales through proactive customer engagement and social media promotion
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-500 mr-2">&mdash;</span> Handled high-volume transactions during peak hours while keeping wait times low
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-500 mr-2">&mdash;</span> Built deep product knowledge to recommend the right parts to each customer
-            </li>
-          </ul>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-blue-500 rounded-full shadow-xl">
+          <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-8 mt-4 md:mt-0">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1">
+            <h3 class="text-xl text-white font-bold mb-1">Sales Representative</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">Advanztech Computer Parts and Services &bull; Iligan City</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Managed monthly sales through proactive customer engagement and social media promotion
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Handled high-volume transactions during peak hours while keeping wait times low
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Built deep product knowledge to recommend the right parts to each customer
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <!-- Experience Item 2 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-neutral-900/80 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-neutral-500 pt-1">
-          Dec 2024 &mdash; Jul 2025
+      <div class="mb-10 flex flex-col md:flex-row-reverse items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-left">
+          <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Dec 2024 &mdash; Jul 2025</span>
         </div>
-        <div class="md:col-span-3">
-          <h3 class="text-xl text-white font-bold mb-1">Customer Care Staff</h3>
-          <div class="text-xs font-mono text-neutral-400 mb-4">New Day Realty Corp &bull; Iligan City</div>
-          <ul class="space-y-2 text-sm text-neutral-400">
-            <li class="flex items-start">
-              <span class="text-blue-500 mr-2">&mdash;</span> Resolved customer complaints within given timeframes to protect client experience
-            </li>
-            <li class="flex items-start">
-              <span class="text-blue-500 mr-2">&mdash;</span> Managed unit turnovers &mdash; coordinating repairs, inspections, and paperwork
-            </li>
-          </ul>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-neutral-700 rounded-full shadow-xl group-hover:border-blue-500 transition-colors">
+          <span class="w-3 h-3 bg-neutral-600 group-hover:bg-blue-500 rounded-full transition-colors"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pr-8 md:pl-0 mt-4 md:mt-0 md:text-right">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1 text-left md:text-left">
+            <h3 class="text-xl text-white font-bold mb-1">Customer Care Staff</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">New Day Realty Corp &bull; Iligan City</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Resolved customer complaints within given timeframes to protect client experience
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Managed unit turnovers &mdash; coordinating repairs, inspections, and paperwork
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <!-- Experience Item 3 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 border-b border-neutral-900/80 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-neutral-500 pt-1">
-          Aug 2024 &mdash; Nov 2024
+      <div class="mb-10 flex flex-col md:flex-row items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-right">
+          <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Aug 2024 &mdash; Nov 2024</span>
         </div>
-        <div class="md:col-span-3">
-          <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
-          <div class="text-xs font-mono text-neutral-400 mb-4">Siblings Solutions &bull; Tagum</div>
-          <ul class="space-y-2 text-sm text-neutral-400">
-            <li class="flex items-start">
-              <span class="text-blue-500 mr-2">&mdash;</span> Processed dental insurance claims for patients using CRM tools
-            </li>
-          </ul>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-neutral-700 rounded-full shadow-xl group-hover:border-blue-500 transition-colors">
+          <span class="w-3 h-3 bg-neutral-600 group-hover:bg-blue-500 rounded-full transition-colors"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-8 mt-4 md:mt-0">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1">
+            <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">Siblings Solutions &bull; Tagum</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Processed dental insurance claims for patients using CRM tools
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <!-- Experience Item 4 -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pb-12 transition-all duration-300 hover:translate-x-1">
-        <div class="md:col-span-1 text-xs font-mono uppercase tracking-wider text-neutral-500 pt-1">
-          Nov 2023 &mdash; Aug 2024
+      <div class="flex flex-col md:flex-row-reverse items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-left">
+          <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Nov 2023 &mdash; Aug 2024</span>
         </div>
-        <div class="md:col-span-3">
-          <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
-          <div class="text-xs font-mono text-neutral-400 mb-4">VXI Global Holdings &bull; Davao City</div>
-          <ul class="space-y-2 text-sm text-neutral-400">
-            <li class="flex items-start">
-              <span class="text-blue-500 mr-2">&mdash;</span> Maintained customer satisfaction through effective problem-solving
-            </li>
-          </ul>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-neutral-700 rounded-full shadow-xl group-hover:border-blue-500 transition-colors">
+          <span class="w-3 h-3 bg-neutral-600 group-hover:bg-blue-500 rounded-full transition-colors"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pr-8 md:pl-0 mt-4 md:mt-0 md:text-right">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1 text-left">
+            <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">VXI Global Holdings &bull; Davao City</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Maintained customer satisfaction through effective problem-solving
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
