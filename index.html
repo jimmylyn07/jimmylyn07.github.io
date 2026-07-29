@@ -29,7 +29,8 @@
 
     <!-- Navigation Links -->
     <nav class="flex flex-wrap items-center text-sm justify-center space-x-8 font-mono mt-4 md:mt-0">
-      <a href="#projects" class="hover:text-white transition-colors">Work</a>
+      <a href="#hero-section" class="hover:text-white transition-colors">About</a>
+      <a href="#projects" class="hover:text-white transition-colors">Projects</a>
       <a href="#skills" class="hover:text-white transition-colors">Skills</a>
       <a href="#experience" class="hover:text-white transition-colors">Experience</a>
       <a href="#about-me" class="hover:text-white transition-colors">Background</a>
@@ -39,7 +40,8 @@
   </div>
 </header>
 
-<section id="about-me" class="bg-[#121212] text-gray-300 body-font relative overflow-hidden">
+<!--hero section-->
+<section id="hero-section" class="bg-[#121212] text-gray-300 body-font relative overflow-hidden">
   <!-- Optional ambient glow background effect -->
   <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -88,7 +90,66 @@
   </div>
 </section>
 
-```
+<section id="projects" class="bg-[#121212] text-gray-300 body-font py-24">
+  <div class="container mx-auto px-5">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col text-left w-full mb-12">
+      <span class="text-xs font-mono uppercase tracking-widest text-orange-500 mb-2">Featured Project</span>
+      <h1 class="sm:text-4xl text-3xl font-bold title-font text-white">My Projects</h1>
+    </div>
+
+    <!-- Projects Container -->
+    <div class="grid grid-cols-1 gap-8">
+      
+      <!-- Project Card 1: Clickable -->
+      <a href="https://your-project-link.com" target="_blank" class="block group">
+        <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl p-8 transition-all duration-300 group-hover:border-orange-500/50 group-hover:bg-[#202020] shadow-xl">
+          
+          <!-- Category / Tech Stack Tag -->
+          <div class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-3">
+            Web App &bull; PHP &bull; MySQL
+          </div>
+
+          <!-- Project Title -->
+          <h2 class="text-2xl text-white font-bold mb-4 group-hover:text-orange-400 transition-colors">
+            E-Hatag &mdash; Digitizing Blood Donor Cards
+          </h2>
+
+          <!-- Description -->
+          <p class="text-gray-400 text-base leading-relaxed mb-6 max-w-3xl">
+            A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type and manage donor records without touching a filing cabinet.
+          </p>
+
+          <!-- Tech Badges -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-3 py-1 text-xs font-mono bg-gray-800 border border-gray-700 text-gray-300 rounded-full">PHP</span>
+            <span class="px-3 py-1 text-xs font-mono bg-gray-800 border border-gray-700 text-gray-300 rounded-full">MySQL</span>
+            <span class="px-3 py-1 text-xs font-mono bg-gray-800 border border-gray-700 text-gray-300 rounded-full">JavaScript</span>
+            <span class="px-3 py-1 text-xs font-mono bg-gray-800 border border-gray-700 text-gray-300 rounded-full">HTML/CSS</span>
+          </div>
+
+          <!-- Key Highlights / Bullet Points -->
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-center">
+              <span class="text-orange-500 mr-2">&#9656;</span> Real-time donation and request flow for donors
+            </li>
+            <li class="flex items-center">
+              <span class="text-orange-500 mr-2">&#9656;</span> Admin dashboard for tracking inventory by blood type
+            </li>
+            <li class="flex items-center">
+              <span class="text-orange-500 mr-2">&#9656;</span> Centralized donor record management
+            </li>
+          </ul>
+
+        </div>
+      </a>
+
+      <!-- Add more project cards here following the exact same structure -->
+
+    </div>
+  </div>
+</section>
 
 <section id="experience" class="text-gray-400 bg-white-900 body-font overflow-hidden">
   <div class="container mx-auto px-6">
@@ -152,97 +213,6 @@
   </div>
 
   
-</section>
-
-<section id="projects" class="text-gray-400 bg-white-900 body-font"><!--projects section-->
-  <div class="container mx-auto px-5 py-24">
-    
-    <div class="flex flex-col text-center w-full mb-12">
-      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-4 text-black">My Projects</h1>
-      
-      <!-- Category Filter Tabs -->
-      <div class="flex justify-center mt-2 space-x-4">
-        <button onclick="filterProjects('all')" class="filter-btn bg-indigo-500 text-white px-6 py-2 rounded-full transition">All</button>
-        <button onclick="filterProjects('web')" class="filter-btn bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-700 transition">Web Projects</button>
-        <button onclick="filterProjects('design')" class="filter-btn bg-gray-800 text-gray-300 px-6 py-2 rounded-full hover:bg-gray-700 transition">Graphic Design</button>
-      </div>
-    </div>
-
-    <!-- Scroll Navigation Arrows -->
-    <div class="flex justify-end mb-4 space-x-2">
-        <button onclick="scrollGrid(-400)" class="p-3 rounded-full bg-gray-800 hover:bg-indigo-500 text-white transition">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-        </button>
-        <button onclick="scrollGrid(400)" class="p-3 rounded-full bg-gray-800 hover:bg-indigo-500 text-white transition">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </button>
-    </div>
-
-    <!-- Scrollable Grid -->
-    <div id="scroll-container" class="flex overflow-x-auto gap-6 scroll-smooth no-scrollbar pb-10" style="scrollbar-width: none; -ms-overflow-style: none;">
-      
-      <!-- Project Card 1: Web -->
-      <div class="min-w-[300px] md:min-w-[400px] project-card web">
-        <a href="https://your-site.com" target="_blank" class="block">
-          <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-            <img class="h-48 rounded-lg w-full object-cover mb-6" src="https://dummyimage.com/720x400" alt="Web">
-            <h3 class="text-indigo-400 text-xs font-medium uppercase mb-1">Web Development</h3>
-            <h2 class="text-xl text-white font-bold mb-3">E-Commerce Site</h2>
-            <p class="text-sm leading-relaxed">Full-stack platform with secure checkout and inventory management.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project Card 2: Design -->
-      <div class="min-w-[300px] md:min-w-[400px] project-card design">
-        <a href="https://www.facebook.com/photo.php?fbid=797776702909722&set=pb.100080321990710.-2207520000&type=3" target="_blank" class="block">
-          <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition-all duration-300">
-            <img class="h-48 rounded-lg w-full object-cover mb-6" src="images\530904808_797776706243055_4083011071309088142_n.jpg" alt="Design">
-            <h3 class="text-pink-400 text-xs font-medium uppercase mb-1">Graphic Design</h3>
-            <h2 class="text-xl text-white font-bold mb-3">Social Media Kit</h2>
-            <p class="text-sm leading-relaxed">Modern minimalist logo design and color palette for tech brands.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project Card 3: Web -->
-      <div class="min-w-[300px] md:min-w-[400px] project-card web">
-        <a href="#" target="_blank" class="block">
-          <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-            <img class="h-48 rounded-lg w-full object-cover mb-6" src="https://dummyimage.com/722x402" alt="Web">
-            <h3 class="text-indigo-400 text-xs font-medium uppercase mb-1">Web Development</h3>
-            <h2 class="text-xl text-white font-bold mb-3">Portfolio Template</h2>
-            <p class="text-sm leading-relaxed">Responsive landing page with clean animations and dark mode.</p>
-          </div>
-        </a>
-      </div>
-
-       <!-- Project Card 4: Design -->
-       <div class="min-w-[300px] md:min-w-[400px] project-card design">
-        <a href="https://www.facebook.com/photo.php?fbid=888322497188475&set=pb.100080321990710.-2207520000&type=3" target="_blank" class="block">
-          <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition-all duration-300">
-            <img class="h-48 rounded-lg w-full object-cover mb-6" src="images\587622658_888322500521808_1338903221852167654_n.jpg" alt="Design">
-            <h3 class="text-pink-400 text-xs font-medium uppercase mb-1">Graphic Design</h3>
-            <h2 class="text-xl text-white font-bold mb-3">Social Media Kit</h2>
-            <p class="text-sm leading-relaxed">Custom templates for high-engagement Instagram marketing.</p>
-          </div>
-        </a>
-      </div>
-
-      <!--project 5 design-->
-      <div class="min-w-[300px] md:min-w-[400px] project-card design">
-        <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0EpAEKPJU9YvRtCcKVw2eSRmCbjnn6JiDposPx56k43GKuyTziDGBrsbJecjJoTEUl&id=100080321990710" target="_blank" class="block">
-          <div class="bg-gray-800 bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition-all duration-300">
-            <img class="h-48 rounded-lg w-full object-cover mb-6" src="images\672691990_1000573615963362_7515365617236472229_n.jpg" alt="Design">
-            <h3 class="text-pink-400 text-xs font-medium uppercase mb-1">Graphic Design</h3>
-            <h2 class="text-xl text-white font-bold mb-3">Social Media Kit</h2>
-            <p class="text-sm leading-relaxed">Custom templates for high-engagement Instagram marketing.</p>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 
