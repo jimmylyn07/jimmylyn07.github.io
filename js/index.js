@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   // 2. TYPED.JS INITIALIZATION (Guarded)
   // ==========================================
+  document.addEventListener("DOMContentLoaded", function () {
   const typedElement = document.getElementById('typed');
   if (typedElement && !typedElement.classList.contains('typed-initialized')) {
     typedElement.classList.add('typed-initialized');
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cursorChar: '|'
     });
   }
+});
 
   // ==========================================
   // 3. SCROLL REVEAL OBSERVER
