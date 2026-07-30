@@ -9,6 +9,9 @@
 </head>
 <body class="bg-[#0c0c0c] text-gray-300 font-sans antialiased selection:bg-blue-500 selection:text-white">
 
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="js/index.js"></script>
+
 <!-- Header / Navigation -->
 <header class="bg-[#0c0c0c]/90 backdrop-blur-md text-gray-300 body-font sticky top-0 z-50 border-b border-neutral-900">
   <div class="container mx-auto flex flex-wrap px-5 max-w-5xl flex-row items-center justify-between h-20">
@@ -37,7 +40,7 @@
       <span class="tracking-widest uppercase">Open to Work</span>
     </div>
 
-    <!-- Hamburger Toggle Button -->
+    <!-- Hamburger Toggle Button (Visible on Tablet & Phone: lg:hidden) -->
     <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none z-50">
       <span class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
       <span class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
@@ -51,6 +54,7 @@
 <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
 <aside id="sidebar-menu" class="fixed top-0 right-0 w-72 h-full bg-[#141414] border-l border-neutral-800 z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between p-8 shadow-2xl">
   
+  <!-- Sidebar Header -->
   <div>
     <div class="flex items-center space-x-3 mb-10 pb-6 border-b border-neutral-900">
       <img src="images/15ad110a-ceeb-4b57-9f01-7c7076962cf9.jpg" alt="Jimmy Lyn Infante" class="w-10 h-10 object-cover rounded-full border border-neutral-800">
@@ -60,6 +64,7 @@
       </div>
     </div>
 
+    <!-- Sidebar Navigation Links -->
     <nav class="flex flex-col space-y-6 text-xs font-mono tracking-widest uppercase text-neutral-300">
       <a href="#hero-section" class="sidebar-link hover:text-blue-400 transition-colors flex items-center justify-between">
         <span>About</span>
@@ -88,6 +93,7 @@
     </nav>
   </div>
 
+  <!-- Sidebar Footer / Status -->
   <div class="pt-6 border-t border-neutral-900">
     <div class="flex items-center space-x-2 text-xs font-mono text-neutral-400">
       <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
@@ -103,22 +109,27 @@
 
   <div class="container mx-auto px-5 max-w-5xl py-24 flex flex-col items-center text-center relative z-10">
     
+    <!-- Profile Avatar -->
     <div class="mb-6 transform transition duration-500 hover:scale-105">
       <img src="images/15ad110a-ceeb-4b57-9f01-7c7076962cf9.jpg" alt="Jimmy Lyn Infante" class="w-24 h-24 object-cover rounded-full p-1 bg-gradient-to-tr from-blue-500 to-indigo-600 shadow-xl">
     </div>
 
+    <!-- Name Heading -->
     <h1 class="title-font sm:text-5xl text-3xl mb-4 font-bold text-white">
       Jimmy Lyn Infante
     </h1>
 
+    <!-- Typewriter Subtitle -->
     <h2 class="text-lg sm:text-xl font-semibold text-gray-400 mb-6 font-mono">
       I'm <span id="typed" class="text-blue-400"></span>
     </h2>
 
+    <!-- Bio Description -->
     <p class="max-w-xl text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
       A web developer and UX designer from Iligan City, Philippines. Google UX Design certified, and I pair hands-on PHP/MySQL development with a research-driven approach to interfaces, backed by years of real customer-facing experience.
     </p>
 
+    <!-- Call to Action Buttons -->
     <div class="flex flex-wrap justify-center gap-4 mb-8">
       <a href="https://docs.google.com/document/d/1t0uHRsNBPWfQfOQK5nzTYQ732vWhmUkBPNcc74xSdlA/edit?usp=sharing" target="_blank" class="inline-flex items-center text-white bg-blue-600 border-0 py-3 px-8 focus:outline-none hover:bg-blue-700 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5">
         View CV
@@ -128,6 +139,7 @@
       </a>
     </div>
 
+    <!-- Social Media Links -->
     <div class="flex space-x-6 text-gray-400">
       <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-400 transition-colors transform hover:scale-110 duration-200" aria-label="GitHub">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -143,27 +155,82 @@
 <!-- Projects Section -->
 <section id="projects" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
+    
+    <!-- Section Header -->
     <div class="flex flex-col text-left w-full mb-12">
       <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">My Work</span>
       <h2 class="sm:text-4xl text-3xl font-bold title-font text-white">Featured Projects</h2>
     </div>
 
+    <!-- Projects Container - 2 Column Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Project Card 1 -->
       <a href="https://your-project-link.com" target="_blank" class="block group h-full">
         <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:border-blue-500/40 group-hover:bg-[#1a1a1a] shadow-xl h-full flex flex-col justify-between">
           <div>
-            <div class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-3">Web App &bull; PHP &bull; MySQL</div>
-            <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-blue-400 transition-colors">E-Hatag &mdash; Digitizing Blood Donor Cards</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed mb-6">A web-based management system built to replace paper blood donor cards with a real-time digital record.</p>
+            <div class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-3">
+              Web App &bull; PHP &bull; MySQL
+            </div>
+            <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-blue-400 transition-colors">
+              E-Hatag &mdash; Digitizing Blood Donor Cards
+            </h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type.
+            </p>
           </div>
           <div>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">PHP</span>
               <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">MySQL</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">JavaScript</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">Tailwind</span>
             </div>
+            <ul class="space-y-2 text-xs text-neutral-400 font-mono">
+              <li class="flex items-center">
+                <span class="text-blue-500 mr-2">&#9656;</span> Real-time donation and request flow
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-500 mr-2">&#9656;</span> Live inventory tracking dashboard
+              </li>
+            </ul>
           </div>
         </div>
       </a>
+
+      <!-- Project Card 2 -->
+      <a href="https://your-project-link.com" target="_blank" class="block group h-full">
+        <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:border-blue-500/40 group-hover:bg-[#1a1a1a] shadow-xl h-full flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-3">
+              Web App &bull; PHP &bull; MySQL
+            </div>
+            <h3 class="text-2xl text-white font-bold mb-4 group-hover:text-blue-400 transition-colors">
+              E-Hatag &mdash; Digitizing Blood Donor Cards
+            </h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              A web-based management system built to replace paper blood donor cards with a real-time digital record. Donors can request or pledge blood directly; admins get a live view of inventory by blood type.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">PHP</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">MySQL</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">JavaScript</span>
+              <span class="px-3 py-1 text-xs font-mono bg-[#0c0c0c] border border-neutral-800 text-neutral-300 rounded-full">Tailwind</span>
+            </div>
+            <ul class="space-y-2 text-xs text-neutral-400 font-mono">
+              <li class="flex items-center">
+                <span class="text-blue-500 mr-2">&#9656;</span> Real-time donation and request flow
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-500 mr-2">&#9656;</span> Live inventory tracking dashboard
+              </li>
+            </ul>
+          </div>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -171,15 +238,39 @@
 <!-- Skills Section -->
 <section id="skills" class="bg-[#0c0c0c] text-gray-300 body-font overflow-hidden py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
+    
     <div class="flex flex-col text-left w-full mb-12">
       <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">Expertise</span>
       <h2 class="title-font sm:text-4xl text-3xl font-bold text-white">Skills</h2>
     </div>
+    
     <div class="skills-viewport relative overflow-hidden w-full">
       <div id="skills-track" class="flex items-center gap-6 w-max cursor-pointer">
-        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center">
-          <img alt="HTML5" class="w-full h-16 object-contain" src="images/HTML5_logo_and_wordmark.svg.webp">
+        
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="HTML5" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="images/HTML5_logo_and_wordmark.svg.webp">
         </div>
+
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="Laravel" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="images/Laravel.svg.png">
+        </div>
+
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="MySQL" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="images/Mysql_logo.png">
+        </div>
+
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="PHP" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="images/PHP-logo.svg.png">
+        </div>
+
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="React" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="images/React-icon.svg.png">
+        </div>
+
+        <div class="skill-item w-36 flex-shrink-0 bg-[#141414] border border-neutral-800/80 p-6 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-blue-500/40">
+          <img alt="Tailwind" class="w-full h-16 object-contain filter grayscale hover:grayscale-0 transition-all" src="images/Tailwind_CSS_Logo.svg.png">
+        </div>
+
       </div>
     </div>
   </div>
@@ -188,9 +279,111 @@
 <!-- Experience Section -->
 <section id="experience" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
+    
     <div class="flex flex-col text-left w-full mb-16">
       <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">Track Record</span>
       <h2 class="sm:text-4xl text-3xl font-bold title-font text-white">Experience</h2>
+    </div>
+
+    <!-- Timeline Wrapper -->
+    <div class="relative wrap overflow-hidden p-0 h-full">
+      
+      <!-- Central Line -->
+      <div class="absolute border-2-2 border-neutral-800 h-full left-6 md:left-1/2 transform -translate-x-1/2 bg-neutral-800 w-0.5 z-0"></div>
+
+      <!-- Experience Item 1 -->
+      <div class="mb-10 flex flex-col md:flex-row items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-right">
+          <span class="text-xs font-mono uppercase tracking-wider text-blue-400 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Aug 2025 &mdash; Present</span>
+        </div>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-blue-500 rounded-full shadow-xl">
+          <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-8 mt-4 md:mt-0">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1">
+            <h3 class="text-xl text-white font-bold mb-1">Sales Representative</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">Advanztech Computer Parts and Services &bull; Iligan City</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Managed monthly sales through proactive customer engagement and social media promotion
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Handled high-volume transactions during peak hours while keeping wait times low
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Built deep product knowledge to recommend the right parts to each customer
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Item 2 -->
+      <div class="mb-10 flex flex-col md:flex-row-reverse items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-left">
+          <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Dec 2024 &mdash; Jul 2025</span>
+        </div>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-neutral-700 rounded-full shadow-xl group-hover:border-blue-500 transition-colors">
+          <span class="w-3 h-3 bg-neutral-600 group-hover:bg-blue-500 rounded-full transition-colors"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pr-8 md:pl-0 mt-4 md:mt-0 md:text-right">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1 text-left">
+            <h3 class="text-xl text-white font-bold mb-1">Customer Care Staff</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">New Day Realty Corp &bull; Iligan City</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Resolved customer complaints within given timeframes to protect client experience
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Managed unit turnovers &mdash; coordinating repairs, inspections, and paperwork
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Item 3 -->
+      <div class="mb-10 flex flex-col md:flex-row items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-right">
+          <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Aug 2024 &mdash; Nov 2024</span>
+        </div>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-neutral-700 rounded-full shadow-xl group-hover:border-blue-500 transition-colors">
+          <span class="w-3 h-3 bg-neutral-600 group-hover:bg-blue-500 rounded-full transition-colors"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-8 mt-4 md:mt-0">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1">
+            <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">Siblings Solutions &bull; Tagum</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Processed dental insurance claims for patients using CRM tools
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Item 4 -->
+      <div class="flex flex-col md:flex-row-reverse items-center justify-between w-full relative z-10 group">
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pl-0 pr-0 md:text-left">
+          <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 bg-[#141414] border border-neutral-800 px-3 py-1 rounded-full">Nov 2023 &mdash; Aug 2024</span>
+        </div>
+        <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center order-1 w-10 h-10 bg-[#141414] border-2 border-neutral-700 rounded-full shadow-xl group-hover:border-blue-500 transition-colors">
+          <span class="w-3 h-3 bg-neutral-600 group-hover:bg-blue-500 rounded-full transition-colors"></span>
+        </div>
+        <div class="order-1 md:w-5/12 w-full pl-14 md:pr-8 md:pl-0 mt-4 md:mt-0 md:text-right">
+          <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1 text-left">
+            <h3 class="text-xl text-white font-bold mb-1">Customer Service Representative</h3>
+            <div class="text-xs font-mono text-neutral-400 mb-4">VXI Global Holdings &bull; Davao City</div>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2">&mdash;</span> Maintained customer satisfaction through effective problem-solving
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -198,9 +391,54 @@
 <!-- Background Section -->
 <section id="background" class="bg-[#0c0c0c] text-gray-300 body-font py-24 border-t border-neutral-900/60">
   <div class="container mx-auto px-5 max-w-5xl">
+    
     <div class="flex flex-col text-left w-full mb-12">
       <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-500 mb-2">Credentials</span>
       <h2 class="sm:text-4xl text-3xl font-bold title-font text-white">Education & Certification</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Education Card -->
+      <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-3">
+            Education
+          </div>
+          <h3 class="text-xl text-white font-bold mb-2">
+            B.S. Information Technology
+          </h3>
+          <p class="text-xs font-mono text-neutral-400 mb-6">
+            Mindanao State University &mdash; Iligan Institute of Technology
+          </p>
+        </div>
+        <div>
+          <p class="text-sm text-neutral-400 leading-relaxed border-t border-neutral-900 pt-4">
+            Relevant coursework: Database Management, Web Development, Software Engineering.
+          </p>
+        </div>
+      </div>
+
+      <!-- Certification Card -->
+      <div class="bg-[#141414] border border-neutral-800/80 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-500/40 flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-3">
+            Certification
+          </div>
+          <h3 class="text-xl text-white font-bold mb-2">
+            Google UX Design Professional Certificate
+          </h3>
+          <p class="text-xs font-mono text-neutral-400 mb-6">
+            Core focus
+          </p>
+        </div>
+        <div>
+          <p class="text-sm text-neutral-400 leading-relaxed border-t border-neutral-900 pt-4">
+            UX research, mobile-responsive web design, wireframing, and interactive prototyping.
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -227,7 +465,7 @@
           0961 430 6515
         </a>
 
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="inline-flex items-center text-gray-300 bg-[#141414] border border-neutral-800 hover:border-blue-500/40 hover:bg-[#1a1a1a] hover:text-blue-400 py-3.5 px-6 rounded-xl font-mono text-xs transition-all duration-300 hover:-translate-y-0.5">
+        <a href="https://linkedin.com/in/jlnfnt" target="_blank" class="inline-flex items-center text-gray-300 bg-[#141414] border border-neutral-800 hover:border-blue-500/40 hover:bg-[#1a1a1a] hover:text-blue-400 py-3.5 px-6 rounded-xl font-mono text-xs transition-all duration-300 hover:-translate-y-0.5">
           LinkedIn 
           <svg class="w-3.5 h-3.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
         </a>
@@ -240,10 +478,6 @@
     </div>
   </div>
 </section>
-
-<!-- SCRIPTS LOADED ONCE AT THE VERY BOTTOM -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="js/index.js"></script>
 
 </body>
 </html>
