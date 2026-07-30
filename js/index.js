@@ -1,52 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ==========================================
-  // 1. MOBILE SIDEBAR NAVIGATION TOGGLE
-  // ==========================================
-  const menuBtn = document.getElementById("menu-btn");
-  const sidebarMenu = document.getElementById("sidebar-menu");
-  const sidebarOverlay = document.getElementById("sidebar-overlay");
-  const sidebarLinks = document.querySelectorAll(".sidebar-link");
+ // --- Typed.js Animation ---
+      const typedElement = document.getElementById('typed');
+      if (typedElement && !typedElement.classList.contains('typed-initialized')) {
+          typedElement.classList.add('typed-initialized');
+          new Typed('#typed', {
+              strings: [
+                  "a WordPress Developer.", 
+                  "an Elementor Expert.",
+                  "a Frontend Developer.", 
+                  "a Graphic Designer."
+              ],
+              typeSpeed: 50,
+              backSpeed: 30,
+              backDelay: 1500,
+              startDelay: 500,
+              loop: true,
+              showCursor: true,
+              cursorChar: '|'
+          });
+      }
 
-  function toggleMenu() {
-    if (sidebarMenu && sidebarOverlay) {
-      sidebarMenu.classList.toggle("translate-x-full");
-      sidebarOverlay.classList.toggle("opacity-0");
-      sidebarOverlay.classList.toggle("pointer-events-none");
-    }
-  }
+      // --- Mobile Sidebar Menu ---
+      const menuBtn = document.getElementById("menu-btn");
+      const sidebarMenu = document.getElementById("sidebar-menu");
+      const sidebarOverlay = document.getElementById("sidebar-overlay");
+      const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
-  if (menuBtn && sidebarMenu && sidebarOverlay) {
-    menuBtn.addEventListener("click", toggleMenu);
-    sidebarOverlay.addEventListener("click", toggleMenu);
-    sidebarLinks.forEach(link => {
-      link.addEventListener("click", toggleMenu);
-    });
-  }
+      function toggleMenu() {
+          if (sidebarMenu && sidebarOverlay) {
+              sidebarMenu.classList.toggle("translate-x-full");
+              sidebarOverlay.classList.toggle("opacity-0");
+              sidebarOverlay.classList.toggle("pointer-events-none");
+          }
+      }
 
-  // ==========================================
-  // 2. TYPED.JS INITIALIZATION (Guarded)
-  // ==========================================
-  document.addEventListener("DOMContentLoaded", function () {
-  const typedElement = document.getElementById('typed');
-  if (typedElement && !typedElement.classList.contains('typed-initialized')) {
-    typedElement.classList.add('typed-initialized');
-    new Typed('#typed', {
-      strings: [
-        "a WordPress Developer.", 
-        "an Elementor Expert.",
-        "a Frontend Developer.", 
-        "a Graphic Designer."
-      ],
-      typeSpeed: 50,
-      backSpeed: 30,
-      backDelay: 1500,
-      startDelay: 500,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|'
-    });
-  }
-});
+      if (menuBtn && sidebarMenu && sidebarOverlay) {
+          menuBtn.addEventListener("click", toggleMenu);
+          sidebarOverlay.addEventListener("click", toggleMenu);
+          sidebarLinks.forEach(link => {
+              link.addEventListener("click", toggleMenu);
+          });
+      }
+      
+  });
 
   // ==========================================
   // 3. SCROLL REVEAL OBSERVER
