@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+};
 
 // ==========================================
 // 4. INFINITE SKILLS TICKER
